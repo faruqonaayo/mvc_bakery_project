@@ -1,0 +1,38 @@
+.add-product-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.add-product-container .add-prod-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.add-product-container .add-prod-form label{
+    margin-bottom: 5px;
+    font-size: .9rem;
+}
+
+.add-product-container .add-prod-form input{
+    margin-bottom: 10px;
+    padding: 2px 5px;
+}
+
+.add-product-container .add-prod-form button[type="submit"]{
+    border: none;
+    height: 29px;
+    background-color: rgb(128, 85, 54);
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.add-product-container .add-prod-form button[type="submit"]:hover{
+    background-color: rgb(172, 133, 106);
+}
+

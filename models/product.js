@@ -42,8 +42,31 @@ module.exports = class Product {
       if (!err) {
         // what happens if the file already exists
         return cb(JSON.parse(fileContent));
-      }else{
+      } else {
         return cb([]);
+      }
+    });
+  }
+  static delete(i) {
+    const dataPath = path.join(
+      path.dirname(require.main.filename),
+      "data",
+      "productData.json"
+    );
+
+    fs.readFile(dataPath, (err, fileContent) => {
+      if (!err) {
+        let productsArray = JSON.parse(fileContent);
+        let newProductsArray = productsArray.filter((_,index) => {
+          return i != index;
+        });
+        fs.writeFile(dataPath, JSON.stringify(newProductsArray), (err) => {
+          if (err) {
+            console.log(err);
+          }
+        });
+      } else {
+        console.log(err);
       }
     });
   }

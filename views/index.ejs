@@ -1,10 +1,14 @@
 <%- include("partials/header.ejs") %>
 <div class="products-container">
-    <% prods.forEach(product => { %>
-        <div  class="productCard">
-            <h1><%= product.name %></h1>
-            <h2><%= product.image %></h2>
-        </div>
-    <% }); %>
+    <% for (let i = 0; i < prods.length; i++) { %>
+        <div  class="product-card">
+            <img class="product-img" src="<%= prods[i].image %>" alt="<%= prods[i].name %> image">
+            <h1><%= prods[i].name %></h1>
+            <form action="/delete-product" method="post">
+                <input type="text" name="prodindex" class="hidden" value="<%= i %>">
+                <button class="delete-product-button" type="submit">Delete</button>
+            </form>   
+        </div>  
+    <% } %>
 </div>
 <%- include("partials/footer.ejs") %>

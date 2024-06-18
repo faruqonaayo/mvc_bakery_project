@@ -8,12 +8,16 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+
 // setting our templating engine and views folder
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // importing the admin router
 const adminRouter = require('./routes/admin');
+
+// showing that our static file is in the public folder
+app.use(express.static("public"));
 
 // using the bodyParser middleware
 app.use(bodyParser.urlencoded({extended: true}));
