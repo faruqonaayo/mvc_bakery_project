@@ -27,7 +27,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(adminRouter);
 
 
-
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });

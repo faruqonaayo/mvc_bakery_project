@@ -23,4 +23,4 @@ module.exports.deleteProduct = (req, res, next) => {
     const productIndex = req.body.prodindex;
     Product.delete(productIndex);
     res.redirect("/");
-}
+};

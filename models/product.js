@@ -6,7 +6,7 @@ module.exports = class Product {
   constructor(n, i) {
     this.name = n;
     this.image = i;
-  }
+  };
 
   save() {
     const dataPath = path.join(
@@ -28,7 +28,7 @@ module.exports = class Product {
         }
       });
     });
-  }
+  };
 
   // a static method can be called directry from the class without having to create a dummy instance of class
   static fetchAll(cb) {
@@ -46,7 +46,8 @@ module.exports = class Product {
         return cb([]);
       }
     });
-  }
+  };
+
   static delete(i) {
     const dataPath = path.join(
       path.dirname(require.main.filename),
