@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+<div class="products-container">
+    <% prods.forEach(product => { %>
+        <div  class="productCard">
+            <h1><%= product.name %></h1>
+            <h2><%= product.image %></h2>
+        </div>
+    <% }); %>
+</div>
+<%- include("partials/footer.ejs") %>

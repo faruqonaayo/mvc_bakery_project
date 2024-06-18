@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<div class="add-page-container">
+    <form action="/add-product" method="post" class="add-prod-form">
+        <label for="prodname">Product Name</label>
+        <input type="text" name="prodname" placeholder="Enter product name">
+        <label for="prodimg">Product Image Link</label>
+        <input type="text" name="prodimg" placeholder="Enter product image link">
+        <button type="submit">Add</button>
+    </form>
+</div>
+<%- include("partials/footer.ejs") %>
